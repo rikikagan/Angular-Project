@@ -1,0 +1,38 @@
+body{
+    direction: rtl;
+}
+h3{
+    font-size:250%;
+}
+.recipeImg{
+    width: 100%;
+}
+.timeIcon{
+    width: 16px;
+}
+.dataContainer{
+    margin-right: 2%;
+    direction: rtl;
+}
+.preparation{
+    margin-right: 5%;
+    direction: rtl;
+    color: grey;
+    /* width: 50%; */
+}
+.userIcon{
+    width: 5%;
+   
+}
+.Adduser{
+    margin-top: 2%;
+    margin-right: 5%;
+    direction: rtl;
+}
+  .my-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+  }
+  

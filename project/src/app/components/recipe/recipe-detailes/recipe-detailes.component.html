@@ -1,0 +1,32 @@
+<img fetchpriority="high" class="recipeImg" [src]="recipe.imgUrl">
+<h1 class="display-5" style="direction: rtl;">{{recipe.name}}</h1>
+
+<div class="dataContainer">
+    <div style="direction: rtl;" class="badge text-bg-warning"><img class="timeIcon" src="../../../../assets/clock.png">
+        זמן הכנה {{recipe.preparationTime}} דקות</div>
+    <div style="direction: rtl;" class="badge text-bg-warning"><span>{{recipe.category.iconUrl}}</span>
+        קטגוריה {{recipe.category.name}}</div>
+    
+</div>
+<div class="Adduser">
+    <img class="userIcon" src="../../../../assets/userIcon.jpg">
+      בעל המתכון: {{recipe.user.userName}}
+</div>
+<div class="container">
+    <h3 class="display-6" style="direction: rtl;">רכיבים</h3>
+    <table class="table table-striped" style="direction: rtl;">
+        <tbody>
+            <tr *ngFor="let ingredient of recipe.ingredients; let i = index">
+                <td>{{ i+1 }}</td>
+                <td>{{ ingredient}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="preparation" *ngFor="let preparation of recipe.preparation; let i=index">
+    <br>
+    <p style="color: black;">שלב {{i+1}}</p> 
+    <p style="max-width: 50%;"> {{preparation}}</p> 
+</div>
+<p-button *ngIf="recipe.user.userName=== this.currentUser"
+ icon="pi pi-pencil" iconPos="right" (click)="updateRecipe()"></p-button>

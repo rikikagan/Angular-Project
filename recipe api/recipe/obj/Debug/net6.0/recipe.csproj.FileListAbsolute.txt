@@ -1,0 +1,91 @@
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\appsettings.Development.json
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\appsettings.json
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\recipe.exe
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\recipe.deps.json
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\recipe.runtimeconfig.json
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\recipe.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\recipe.pdb
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\Microsoft.OpenApi.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.csproj.AssemblyReference.cache
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.AssemblyInfoInputs.cache
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.AssemblyInfo.cs
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.csproj.CoreCompileInputs.cache
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.MvcApplicationPartsAssemblyInfo.cs
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.MvcApplicationPartsAssemblyInfo.cache
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\staticwebassets.build.json
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\staticwebassets.development.json
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\scopedcss\bundle\recipe.styles.css
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.csproj.CopyComplete
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\refint\recipe.dll
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.pdb
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\recipe.genruntimeconfig.cache
+Y:\Groups\Group_3\שורצברג  גיטל\ANGULAR\recipe\recipe\obj\Debug\net6.0\ref\recipe.dll
+E:\recipe\recipe\bin\Debug\net6.0\appsettings.Development.json
+E:\recipe\recipe\bin\Debug\net6.0\appsettings.json
+E:\recipe\recipe\bin\Debug\net6.0\recipe.exe
+E:\recipe\recipe\bin\Debug\net6.0\recipe.deps.json
+E:\recipe\recipe\bin\Debug\net6.0\recipe.runtimeconfig.json
+E:\recipe\recipe\bin\Debug\net6.0\recipe.dll
+E:\recipe\recipe\bin\Debug\net6.0\recipe.pdb
+E:\recipe\recipe\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\recipe\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\recipe\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\recipe\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\recipe\recipe\obj\Debug\net6.0\recipe.csproj.AssemblyReference.cache
+E:\recipe\recipe\obj\Debug\net6.0\recipe.GeneratedMSBuildEditorConfig.editorconfig
+E:\recipe\recipe\obj\Debug\net6.0\recipe.AssemblyInfoInputs.cache
+E:\recipe\recipe\obj\Debug\net6.0\recipe.AssemblyInfo.cs
+E:\recipe\recipe\obj\Debug\net6.0\recipe.csproj.CoreCompileInputs.cache
+E:\recipe\recipe\obj\Debug\net6.0\recipe.MvcApplicationPartsAssemblyInfo.cs
+E:\recipe\recipe\obj\Debug\net6.0\recipe.MvcApplicationPartsAssemblyInfo.cache
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets.build.json
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets.development.json
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets\msbuild.recipe.Microsoft.AspNetCore.StaticWebAssets.props
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets\msbuild.build.recipe.props
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.recipe.props
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.recipe.props
+E:\recipe\recipe\obj\Debug\net6.0\staticwebassets.pack.json
+E:\recipe\recipe\obj\Debug\net6.0\scopedcss\bundle\recipe.styles.css
+E:\recipe\recipe\obj\Debug\net6.0\recipe.csproj.CopyComplete
+E:\recipe\recipe\obj\Debug\net6.0\recipe.dll
+E:\recipe\recipe\obj\Debug\net6.0\refint\recipe.dll
+E:\recipe\recipe\obj\Debug\net6.0\recipe.pdb
+E:\recipe\recipe\obj\Debug\net6.0\recipe.genruntimeconfig.cache
+E:\recipe\recipe\obj\Debug\net6.0\ref\recipe.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\appsettings.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\recipe.exe
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\recipe.deps.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\recipe.runtimeconfig.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\recipe.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\recipe.pdb
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.AssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets\msbuild.recipe.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets\msbuild.build.recipe.props
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.recipe.props
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.recipe.props
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\scopedcss\bundle\recipe.styles.css
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.csproj.CopyComplete
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\refint\recipe.dll
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.pdb
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\recipe.genruntimeconfig.cache
+C:\Users\user1\Desktop\תכנות\שנה ב\פרויקט אנגולר\recipe api\recipe\obj\Debug\net6.0\ref\recipe.dll

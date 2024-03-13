@@ -1,0 +1,86 @@
+<form [formGroup]="addForm">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6">
+                <img class="addRecipe" src="../../../../../assets/addRecipe.jpg">
+            </div>
+            <div class="col-md-10 text-end formRecipe">
+                <div>
+                    <h3 class="newRecipe display-6">הוספת מתכון חדש</h3>
+                </div>
+                <div class="mb-3 input">
+                    <label for="recipeName" class="form-label">שם המתכון</label>
+                    <input type="text" class="form-control" id="recipeName" formControlName="recipeName">
+                </div>
+                <div class="mb-3 input">
+                    <label for="recipeCategory" class="form-label">בחירת קטגוריה</label>
+                    <select class="form-select" formControlName="recipeCategory">
+                        <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 input">
+                    <div class="col ">
+                        <label for="recipeName" class="form-label">דרגת קושי</label>
+                        <select class="form-select" formControlName="recipeDifficulty">
+                            <option value=1>קל מאוד</option>
+                            <option value=2>קל</option>
+                            <option value=3>בינוני</option>
+                            <option value=4>קשה</option>
+                            <option value=5>קשה מאוד</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label for="recipeName" class="form-label">זמן הכנה (בדקות)</label>
+                        <input type="number" class="form-control" id="recipeName" formControlName="recipeTime">
+                    </div>
+                </div>
+
+                <div class="mb-3 input">
+                    <label for="recipeName" class="form-label">קישור לתמונה</label>
+                    <input type="url" class="form-control" formControlName="recipeImageUrl">
+                </div>
+
+                <div>
+                    <div formArrayName="ingredients">
+                        <div *ngFor="let ingredientControl of getIngredients.controls; let i = index">
+                            <div class="mb-3 input">
+                                <input type="text" class="form-control" [formControlName]="i">
+                                <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
+                                    style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
+                                    (click)="removeIngredient(i)">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="addIngredient()">
+                        <i class="pi pi-plus"></i> הוסף רכיב
+                    </button>
+                </div>
+
+                <div>
+                    <div formArrayName="preparation">
+                        <div *ngFor="let preControl of getPreparation.controls; let i = index">
+                            <div class="mb-3 input">
+                                <input type="text" class="form-control" [formControlName]="i">
+                                <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
+                                    style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
+                                    (click)="removePreparation(i)">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="addPreparation()">
+                        <i class="pi pi-plus"></i> הוסף הוראות
+                    </button>
+                </div>
+
+
+                <p-button (click)="submit()" label="Submit" icon="pi pi-check" iconPos="right"></p-button>
+            </div>
+        </div>
+    </div>
+</form>

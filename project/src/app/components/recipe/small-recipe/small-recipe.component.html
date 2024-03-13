@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <img src={{recipeToShow.imgUrl}} class="card-img-top" alt="recipeImg">
+
+  <div class="card-body">
+    <h5>{{recipeToShow.name}}</h5>
+    <span class="card-text">רמת קושי:</span>
+    <div>
+
+      <ng-container *ngFor="let index of [1, 2, 3, 4, 5]; let i = index">
+        <img  *ngIf="i < recipeToShow.difficulty" src="assets/star-fill.png" alt="Star icon" style="width: 16px; height: 16px;"/>
+        <img  *ngIf="i >= recipeToShow.difficulty" src="assets/star-outline.png" alt="Star icon" style="width: 16px; height: 16px;"/>
+      </ng-container>
+    </div>
+  </div>
+</div>
