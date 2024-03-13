@@ -41,13 +41,14 @@ namespace recipe.Controllers
         {
             var recipe= _data.RecipeList.Find(_ => _.Id == id);
             recipe.DateAdded=newRecipe.DateAdded;
-            recipe.Category=newRecipe.Category;
+            recipe.Category=_data.CategoryList.Find(n=>n.Name==newRecipe.Category.Name);
             recipe.Difficulty=newRecipe.Difficulty;
             recipe.Name=newRecipe.Name;
             recipe.ImgUrl=newRecipe.ImgUrl;
             recipe.Ingredients=newRecipe.Ingredients;
             recipe.Preparation=newRecipe.Preparation;
             recipe.PreparationTime=newRecipe.PreparationTime;
+            recipe.User=newRecipe.User;
         }
 
         // DELETE api/<RecipeController>/5

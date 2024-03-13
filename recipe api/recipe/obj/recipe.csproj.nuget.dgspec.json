@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\recipe api\\recipe\\recipe.csproj": {}
+    "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\‏‏תיקיה חדשה\\recipe api\\recipe\\recipe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\recipe api\\recipe\\recipe.csproj": {
+    "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\‏‏תיקיה חדשה\\recipe api\\recipe\\recipe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\recipe api\\recipe\\recipe.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\‏‏תיקיה חדשה\\recipe api\\recipe\\recipe.csproj",
         "projectName": "recipe",
-        "projectPath": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\recipe api\\recipe\\recipe.csproj",
+        "projectPath": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\‏‏תיקיה חדשה\\recipe api\\recipe\\recipe.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\recipe api\\recipe\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\‏‏תיקיה חדשה\\recipe api\\recipe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

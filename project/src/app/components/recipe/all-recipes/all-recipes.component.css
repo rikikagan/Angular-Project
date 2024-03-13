@@ -1,0 +1,37 @@
+.gap-2{
+    direction: rtl;
+
+}
+.block{
+    direction: rtl;
+
+}
+  .field-checkbox{
+    margin-bottom: 10px;
+  }
+  .checkbox-with-label {
+    display: flex;
+    align-items: center;
+}
+
+.category-name {
+    margin-right: 2%;
+}
+.sidebar{
+  width: 50%;
+}
+.filter{
+  margin-top: 10%;
+}
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.recipe-item {
+  flex: 1 1 calc(20% - 10px); /* כדי לשמור על מרווחים בין הפריטים */
+}
+
+

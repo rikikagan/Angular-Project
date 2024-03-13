@@ -11,12 +11,17 @@ import { LogOutButtonComponent } from '../log-out-button/log-out-button.componen
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { HeaderComponent } from '../../header/header.component';
 import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
+import { HoursPipe } from '../../hours.pipe';
+import { SidebarModule } from 'primeng/sidebar';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RatingModule } from 'primeng/rating';
 
 
 @NgModule({
-  declarations: [AllRecipesComponent, RecipeDetailesComponent,SmallRecipeComponent,AddRecipeComponent,EditRecipeComponent],
+  declarations: [AllRecipesComponent, RecipeDetailesComponent, SmallRecipeComponent, AddRecipeComponent, EditRecipeComponent],
   imports: [
-    CommonModule, RecipeRoutesModule,LogOutButtonComponent,FormsModule,HeaderComponent,ButtonModule, ReactiveFormsModule
+    CommonModule, RecipeRoutesModule, LogOutButtonComponent, FormsModule, HeaderComponent,
+    ButtonModule, ReactiveFormsModule, HoursPipe, SidebarModule,CheckboxModule,RatingModule
   ]
 })
 export class RecipeModuleModule { }

@@ -3,7 +3,7 @@
 
 <div class="dataContainer">
     <div style="direction: rtl;" class="badge text-bg-warning"><img class="timeIcon" src="../../../../assets/clock.png">
-        זמן הכנה {{recipe.preparationTime}} דקות</div>
+        זמן הכנה {{recipe.preparationTime | hours}} </div>
     <div style="direction: rtl;" class="badge text-bg-warning"><span>{{recipe.category.iconUrl}}</span>
         קטגוריה {{recipe.category.name}}</div>
     
@@ -30,3 +30,5 @@
 </div>
 <p-button *ngIf="recipe.user.userName=== this.currentUser"
  icon="pi pi-pencil" iconPos="right" (click)="updateRecipe()"></p-button>
+ <p-button *ngIf="recipe.user.userName=== this.currentUser"
+ icon="pi pi-trash" iconPos="right" (click)="delete()"></p-button>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nPUvp8f5WlxOnVotBEnWNJjKI1IUhTn2z9yofU32qAOPaWW6faIgT5h4KSAPXMvC3Z46Gc0vGd9mQNYty0TmzA==",
+  "dgSpecHash": "BPtAQ6M6XAI2IpFRmev1TRJuHQSyXZtGQfOCTAxRUHNU8/1DUjoMHlhya1v7BaeGTTxK31gNabkVXhI9mG9hPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\recipe api\\recipe\\recipe.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Documents\\תיכנות ו\\פרויקט אנגולר\\‏‏תיקיה חדשה\\recipe api\\recipe\\recipe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

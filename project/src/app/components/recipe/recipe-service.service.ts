@@ -10,7 +10,7 @@ export class RecipeServiceService {
 
   public recipeToUpdate!:Recipe
   constructor(private _http: HttpClient) { }
-
+ 
   getRecipesList(): Observable<Recipe[]> {
     return this._http.get<Recipe[]>('https://localhost:7020/api/Recipe')
   }
@@ -24,8 +24,12 @@ export class RecipeServiceService {
     
   }
 
-  updateRecipe(recipe: Recipe)
+  updateRecipe(recipe: Recipe,id: number) 
   {
-    return this._http.put('https://localhost:7020/api/Recipe', recipe)
+    return this._http.put(`https://localhost:7020/api/Recipe/${id}`, recipe)
+  }
+  deleteRecipe(id:number) 
+  {
+    return this._http.delete(`https://localhost:7020/api/Recipe/${id}`)
   }
 }

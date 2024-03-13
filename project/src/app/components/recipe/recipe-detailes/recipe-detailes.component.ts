@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { RecipeServiceService } from '../recipe-service.service';
 import { Recipe } from '../recipeModel';
-
 
 @Component({
   selector: 'app-recipe-detailes',
@@ -33,7 +32,24 @@ export class RecipeDetailesComponent {
     })
   }
   updateRecipe(){
+
     this._recipeService.recipeToUpdate=this.recipe;
     this.router.navigate(['/recipes/edit-recipes'])
+  }
+  delete()
+  {
+    this.currentUser=sessionStorage.getItem('username')!;
+    this.route.params.subscribe((param) => {
+      this.recipeId = param['id']
+      this._recipeService.deleteRecipe(this.recipeId).subscribe({
+        next: (res) => {
+          alert("the recipe delete!!!!")
+          this.router.navigate(['/recipes/all-recipes'])
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      })
+    })
   }
 }
