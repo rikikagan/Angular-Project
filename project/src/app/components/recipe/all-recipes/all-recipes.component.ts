@@ -19,7 +19,7 @@ export class AllRecipesComponent implements OnInit {
   public categories: Category[] = [];
   displayFilteredRecipes = false;
   filteredRecipes: Recipe[] = [];
-  
+
   constructor(private _recipeService: RecipeServiceService, private router: Router,
     private fb: FormBuilder, private _categoryService: CategoryService) { }
 
@@ -58,26 +58,26 @@ export class AllRecipesComponent implements OnInit {
   resetForm() {
     this.filterForm.reset(); // Reset all form controls
     const selectedCategoryControl = this.filterForm.get('selectedCategory') as FormArray;
-    selectedCategoryControl.clear(); 
+    selectedCategoryControl.clear();
     selectedCategoryControl.controls.forEach((control) => {
       control.setValue(false);
     });
   }
 
   filter() {
-    console.log("categories",this.filterForm.value.selectedCategory)
-     this.filteredRecipes = this.recipesList.filter(recipe =>
-     ( this.filterForm.value.difficulty===0 || recipe.difficulty === this.filterForm.value.difficulty) && 
-    (this.filterForm.value.selectedCategory==null || this.filterForm.value.selectedCategory.includes(recipe.category.name)) &&
-    (this.filterForm.value.time===null || recipe.preparationTime <= parseInt(this.filterForm.value.time))
-  );
-  this.displayFilteredRecipes = true;
-  }
+    this.filteredRecipes = this.recipesList.filter(recipe =>
+   ( this.filterForm.value.difficulty===undefined|| recipe.difficulty === this.filterForm.value.difficulty) && 
+   (this.filterForm.value.selectedCategory.length==0 || this.filterForm.value.selectedCategory.includes(recipe.category.name)) &&
+   (this.filterForm.value.time===0 || recipe.preparationTime <= parseInt(this.filterForm.value.time))
+ );
+ this.displayFilteredRecipes = true;
+ this.recipesList=this.filteredRecipes;
+ }
 
   updateSelectedCategories(event: Event, category: string) {
     const formArray = this.filterForm.get('selectedCategory') as FormArray;
-  
-    if ((event.target as HTMLInputElement).checked==true) {
+
+    if ((event.target as HTMLInputElement).checked == true) {
       formArray.push(new FormControl(category));
     } else {
       const index = formArray.controls.findIndex(control => control.value === category);

@@ -1,66 +1,62 @@
 <app-header></app-header>
-<div class="recipe-container">
-    
-        <div class="recipe-item" *ngFor="let recipe of recipesList" (click)="showDetails(recipe)">
-            <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
-          </div>
-</div>
+
 
 <div *ngIf="displayFilteredRecipes; else showAllRecipes">
-    <!-- Display filtered recipes here -->
-    <div *ngFor="let recipe of filteredRecipes">
-      <div (click)="showDetails(recipe)" style="width: fit-content;">
-        <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
-      </div>
+  <!-- Display filtered recipes here -->
+  <div *ngFor="let recipe of filteredRecipes">
+    <div (click)="showDetails(recipe)" style="width: fit-content;">
+      <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
     </div>
   </div>
-  <ng-template #showAllRecipes>
-    <!-- Display all recipes initially -->
-    <div *ngFor="let recipe of recipesList">
-      <div (click)="showDetails(recipe)" style="width: fit-content;">
-        <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
-      </div>
+</div>
+<ng-template #showAllRecipes>
+  <!-- Display all recipes initially -->
+  <div class="recipe-container">
+    <div class="recipe-item" *ngFor="let recipe of recipesList" (click)="showDetails(recipe)">
+      <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
     </div>
-  </ng-template>
-  <p-sidebar [ngStyle]="" [(visible)]="sidebarVisible2" position="right">
-    <form [formGroup]="filterForm">
-      <h3 style="direction: rtl;">סנן לפי:</h3>
+  </div>
+  
+</ng-template>
+<p-sidebar [ngStyle]="" [(visible)]="sidebarVisible2" position="right">
+  <form [formGroup]="filterForm">
+    <h3 style="direction: rtl;">סנן לפי:</h3>
+    <br>
+    <div class="block">
+      <h4>דרגת קושי</h4><br>
+      <p-rating [(ngModel)]="difficulty" [cancel]="false" formControlName="difficulty"></p-rating>
+      <br><br>
+      <h4>קטגוריה</h4>
       <br>
-      <div class="block">
-        <h4>דרגת קושי</h4><br>
-        <p-rating [(ngModel)]="difficulty" [cancel]="false" formControlName="difficulty"></p-rating>
-        <br><br>
-        <h4>קטגוריה</h4>
-        <br>
-        <div formArrayName="selectedCategory" class="flex flex-column gap-2">
-          <div *ngFor="let category of categories; let i = index" class="field-checkbox">
-            <div class="checkbox-with-label">
-              <input type="checkbox"  [value]="category.name" (click)="updateSelectedCategories($event, category.name)">
-              <!-- <p-checkbox name="group" [value]="category.name"
+      <div formArrayName="selectedCategory" class="flex flex-column gap-2">
+        <div *ngFor="let category of categories; let i = index" class="field-checkbox">
+          <div class="checkbox-with-label">
+            <input type="checkbox" [value]="category.name" (click)="updateSelectedCategories($event, category.name)">
+            <!-- <p-checkbox name="group" [value]="category.name"
                 (click)="updateSelectedCategories($event, category.name)"></p-checkbox> -->
-              <span class="category-name">{{ category.name }}</span>
-            </div>
+            <span class="category-name">{{ category.name }}</span>
           </div>
         </div>
-      </div><br>
-      <h4>זמן הכנה</h4><br>
-      <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="direction: ltr;">
-        <input type="radio" class="btn-check" id="btnradio1" autocomplete="off" value=60 formControlName="time">
-        <label class="btn btn-outline-warning" for="btnradio1">עד שעה</label>
-  
-        <input type="radio" class="btn-check" id="btnradio2" autocomplete="off" value=30 formControlName="time">
-        <label class="btn btn-outline-warning" for="btnradio2">עד 30 דקות</label>
-  
-        <input type="radio" class="btn-check" id="btnradio3" autocomplete="off" checked value=15 formControlName="time">
-        <label class="btn btn-outline-warning" for="btnradio3">עד 15 דקות</label>
       </div>
-  
-      
-      <p-button (click)="filter()" icon="pi pi-filter" [rounded]="true"></p-button>
-      <p-button (click)="resetForm()" icon="pi pi-undo" [rounded]="true" [outlined]="true"></p-button>
-    </form>
-  </p-sidebar>
-  
-  <p-button type="button" class="mr-2 p-button-rounded" (click)="sidebarVisible2 = true">
-    <i class="pi pi-filter"></i>
-  </p-button>
+    </div><br>
+    <h4>זמן הכנה</h4><br>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="direction: ltr;">
+      <input type="radio" class="btn-check" id="btnradio1" autocomplete="off" value=60 formControlName="time">
+      <label class="btn btn-outline-warning" for="btnradio1">עד שעה</label>
+
+      <input type="radio" class="btn-check" id="btnradio2" autocomplete="off" value=30 formControlName="time">
+      <label class="btn btn-outline-warning" for="btnradio2">עד 30 דקות</label>
+
+      <input type="radio" class="btn-check" id="btnradio3" autocomplete="off" checked value=15 formControlName="time">
+      <label class="btn btn-outline-warning" for="btnradio3">עד 15 דקות</label>
+    </div>
+
+
+    <p-button (click)="filter()" icon="pi pi-filter" [rounded]="true"></p-button>
+    <p-button (click)="resetForm()" icon="pi pi-undo" [rounded]="true" [outlined]="true"></p-button>
+  </form>
+</p-sidebar>
+
+<p-button type="button" class="mr-2 p-button-rounded" (click)="sidebarVisible2 = true">
+  <i class="pi pi-filter"></i>
+</p-button>
