@@ -21,13 +21,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [AllRecipesComponent, RecipeDetailesComponent, SmallRecipeComponent, AddRecipeComponent, EditRecipeComponent],
   imports: [
     CommonModule, RecipeRoutesModule, LogOutButtonComponent, FormsModule, HeaderComponent,
     ButtonModule, ReactiveFormsModule, HoursPipe, SidebarModule,CheckboxModule,RatingModule
-    ,MatFormFieldModule, MatInputModule, MatSelectModule,MatButtonModule, MatDividerModule, MatIconModule
+    ,MatFormFieldModule, MatInputModule, MatSelectModule,MatButtonModule, MatDividerModule,
+     MatIconModule,ToastModule
   ]
 })
 export class RecipeModuleModule { }

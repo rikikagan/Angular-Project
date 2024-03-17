@@ -7,7 +7,7 @@
             </div>
             <div class="col-md-10 text-end formRecipe">
                 <div>
-                    <h1 class="newRecipe display-6">הוספת מתכון חדש</h1>
+                    <h1 class="newRecipe display-6">הוספת מתכון חדש</h1><br>
                 </div>
                 <mat-form-field class="mat input">
                     <mat-label value="warn">שם המתכון</mat-label>
@@ -46,11 +46,11 @@
                             <mat-form-field class="mat input">
                                 <input  matInput [formControlName]="i">
                             </mat-form-field>
-                                <!-- <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
-                                    style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
-                                    (click)="removeIngredient(i)">
-                                    -
-                                </button> -->
+                            <button mat-icon-button color="accent" (click)="removeIngredient(i)">
+                                <mat-icon><span class="material-symbols-outlined">
+                                        do_not_disturb_on
+                                    </span></mat-icon>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -62,11 +62,11 @@
                             <mat-form-field class="mat input">
                                 <input  matInput [formControlName]="i">
                             </mat-form-field>
-                                <!-- <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
-                                    style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
-                                    (click)="removePreparation(i)">
-                                    -
-                                </button>   -->
+                            <button mat-icon-button color="accent" (click)="removePreparation(i)">
+                                <mat-icon><span class="material-symbols-outlined">
+                                        do_not_disturb_on
+                                    </span></mat-icon>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -78,9 +78,10 @@
                         <i class="pi pi-plus"></i>
                         הוסף הוראות
                     </button>
-                    <button color="accent" mat-raised-button (click)="submit()">
+                    <button color="accent" mat-raised-button (click)="checkValidation()">
                         <i class="pi pi-check"></i>עדכון</button>
                 </div>
+                <p-toast position="top-center" key="tc"></p-toast>
             </div>
         </div>
     </div>
