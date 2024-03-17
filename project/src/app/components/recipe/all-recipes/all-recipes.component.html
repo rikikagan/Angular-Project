@@ -1,23 +1,45 @@
 <app-header></app-header>
 
+<!-- <p-button type="button" class="mr-2 p-button-rounded filterB" (click)="sidebarVisible2 = true">
+  <i class="pi pi-filter"></i>
+</p-button> -->
+<div *ngIf="!displayFilteredRecipes" class="example-button-container filterB" (click)="sidebarVisible2 = true">
+  <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+    <mat-icon><span class="material-symbols-outlined">
+        filter_alt
+      </span></mat-icon>
+  </button>
+</div>
+
+<div *ngIf="displayFilteredRecipes" class="example-button-container filterB" (click)="displayFilteredRecipes=false">
+  <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+    <mat-icon><span class="material-symbols-outlined">
+        filter_alt_off
+      </span></mat-icon>
+  </button>
+</div>
 
 <div *ngIf="displayFilteredRecipes; else showAllRecipes">
   <!-- Display filtered recipes here -->
-  <div *ngFor="let recipe of filteredRecipes">
-    <div (click)="showDetails(recipe)" style="width: fit-content;">
-      <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
+  <div class="recipe-container">
+    <div class="recipe-item" *ngFor="let recipe of filteredRecipes">
+      <div (click)="showDetails(recipe)" style="width: fit-content;">
+        <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
+      </div>
     </div>
   </div>
 </div>
 <ng-template #showAllRecipes>
   <!-- Display all recipes initially -->
   <div class="recipe-container">
-    <div class="recipe-item" *ngFor="let recipe of recipesList" (click)="showDetails(recipe)">
-      <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
+    <div class="recipe-item" *ngFor="let recipe of recipesList">
+      <div (click)="showDetails(recipe)" style="width: fit-content;">
+        <app-small-recipe [recipeToShow]="recipe"></app-small-recipe>
+      </div>
     </div>
   </div>
-  
 </ng-template>
+
 <p-sidebar [ngStyle]="" [(visible)]="sidebarVisible2" position="right">
   <form [formGroup]="filterForm">
     <h3 style="direction: rtl;">סנן לפי:</h3>
@@ -33,30 +55,40 @@
           <div class="checkbox-with-label">
             <input type="checkbox" [value]="category.name" (click)="updateSelectedCategories($event, category.name)">
             <!-- <p-checkbox name="group" [value]="category.name"
-                (click)="updateSelectedCategories($event, category.name)"></p-checkbox> -->
+              (click)="updateSelectedCategories($event, category.name)"></p-checkbox> -->
             <span class="category-name">{{ category.name }}</span>
           </div>
         </div>
+      </div><br>
+
+      <h4>זמן הכנה</h4><br>
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="direction: ltr;">
+        <input type="radio" class="btn-check" id="btnradio1" autocomplete="off" value=60 formControlName="time">
+        <label class="btn btn-outline-warning" for="btnradio1">עד שעה</label>
+
+        <input type="radio" class="btn-check" id="btnradio2" autocomplete="off" value=30 formControlName="time">
+        <label class="btn btn-outline-warning" for="btnradio2">עד 30 דקות</label>
+
+        <input type="radio" class="btn-check" id="btnradio3" autocomplete="off" checked value=15 formControlName="time">
+        <label class="btn btn-outline-warning" for="btnradio3">עד 15 דקות</label>
       </div>
     </div><br>
-    <h4>זמן הכנה</h4><br>
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="direction: ltr;">
-      <input type="radio" class="btn-check" id="btnradio1" autocomplete="off" value=60 formControlName="time">
-      <label class="btn btn-outline-warning" for="btnradio1">עד שעה</label>
 
-      <input type="radio" class="btn-check" id="btnradio2" autocomplete="off" value=30 formControlName="time">
-      <label class="btn btn-outline-warning" for="btnradio2">עד 30 דקות</label>
-
-      <input type="radio" class="btn-check" id="btnradio3" autocomplete="off" checked value=15 formControlName="time">
-      <label class="btn btn-outline-warning" for="btnradio3">עד 15 דקות</label>
+    <div class="icons">
+      <div class="example-button-container filterB" >
+        <button mat-fab color="accent" (click)="filter()">
+          <mat-icon><span class="material-symbols-outlined">
+              filter_alt
+            </span></mat-icon>
+        </button>
+      </div>
+      <button mat-icon-button (click)="resetForm()">
+        <mat-icon><span class="material-symbols-outlined" >
+            refresh
+          </span></mat-icon>
+      </button>
     </div>
 
-
-    <p-button (click)="filter()" icon="pi pi-filter" [rounded]="true"></p-button>
-    <p-button (click)="resetForm()" icon="pi pi-undo" [rounded]="true" [outlined]="true"></p-button>
+  
   </form>
 </p-sidebar>
-
-<p-button type="button" class="mr-2 p-button-rounded" (click)="sidebarVisible2 = true">
-  <i class="pi pi-filter"></i>
-</p-button>

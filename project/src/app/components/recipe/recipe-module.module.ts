@@ -15,13 +15,19 @@ import { HoursPipe } from '../../hours.pipe';
 import { SidebarModule } from 'primeng/sidebar';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RatingModule } from 'primeng/rating';
-
+import {MatInputModule}from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [AllRecipesComponent, RecipeDetailesComponent, SmallRecipeComponent, AddRecipeComponent, EditRecipeComponent],
   imports: [
     CommonModule, RecipeRoutesModule, LogOutButtonComponent, FormsModule, HeaderComponent,
     ButtonModule, ReactiveFormsModule, HoursPipe, SidebarModule,CheckboxModule,RatingModule
+    ,MatFormFieldModule, MatInputModule, MatSelectModule,MatButtonModule, MatDividerModule, MatIconModule
   ]
 })
 export class RecipeModuleModule { }

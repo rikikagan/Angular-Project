@@ -1,3 +1,4 @@
+<app-header></app-header>
 <form [formGroup]="updateForm">
     <div class="container">
         <div class="row justify-content-end">
@@ -6,80 +7,81 @@
             </div>
             <div class="col-md-10 text-end formRecipe">
                 <div>
-                    <h3 class="newRecipe display-6">הוספת מתכון חדש</h3>
+                    <h1 class="newRecipe display-6">הוספת מתכון חדש</h1>
                 </div>
-                <div class="mb-3 input">
-                    <label for="recipeName" class="form-label">שם המתכון</label>
-                    <input type="text" class="form-control" id="recipeName" formControlName="recipeName">
-                </div>
-                <div class="mb-3 input">
-                    <label for="recipeCategory" class="form-label">בחירת קטגוריה</label>
-                    <select class="form-select" formControlName="recipeCategory">
-                        <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
-                    </select>
-                </div>
-
-                <div class="mb-3 input">
-                    <div class="col ">
-                        <label for="recipeName" class="form-label">דרגת קושי</label>
-                        <select class="form-select" formControlName="recipeDifficulty">
-                            <option value="starter">קל מאוד</option>
-                            <option value="2">קל</option>
-                            <option value="3">בינוני</option>
-                            <option value="4">קשה</option>
-                            <option value="5">קשה מאוד</option>
-                        </select>
-                    </div>
-
-                    <div class="col">
-                        <label for="recipeName" class="form-label">זמן הכנה (בדקות)</label>
-                        <input type="number" class="form-control" id="recipeName" formControlName="recipeTime">
-                    </div>
-                </div>
-
-                <div class="mb-3 input">
-                    <label for="recipeName" class="form-label">קישור לתמונה</label>
-                    <input type="url" class="form-control" formControlName="recipeImageUrl">
-                </div>
-
+                <mat-form-field class="mat input">
+                    <mat-label value="warn">שם המתכון</mat-label>
+                    <input matInput formControlName="recipeName">
+                </mat-form-field>
+                <mat-form-field class="mat input">
+                    <mat-label>בחירת קטגוריה</mat-label>
+                    <mat-select formControlName="recipeCategory">
+                        <mat-option *ngFor="let category of categories"
+                            [value]="category.name">{{category.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="mat input">
+                    <mat-label>דרגת קושי </mat-label>
+                    <mat-select formControlName="recipeDifficulty">
+                        <mat-option value=1>קל מאוד </mat-option>
+                        <mat-option value=2>קל</mat-option>
+                        <mat-option value=3>בינוני</mat-option>
+                        <mat-option value=4>קשה</mat-option>
+                        <mat-option value=5>קשה מאוד</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="mat input">
+                    <mat-label>זמן הכנה (בדקות)</mat-label>
+                    <input type="number" matInput formControlName="recipeTime">
+                </mat-form-field>
+                <mat-form-field class="mat input">
+                    <mat-label>קישור לתמונה</mat-label>
+                    <input type="url" matInput formControlName="recipeImageUrl">
+                </mat-form-field>
                 <div>
                     <div formArrayName="ingredients">
                         <div *ngFor="let ingredientControl of getIngredients.controls; let i = index">
-                            <div class="mb-3 input">
-                                <input type="text" class="form-control" [formControlName]="i">
-                                <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
-                                    style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
-                                    (click)="removeIngredient(i)">
-                                    -
-                                </button>
-                            </div>
+                            <h3 *ngIf="i===0" class="secondtytle">המוצרים</h3>
+                            <p class="label-txt">מוצר {{ i + 1 }}</p>
+                            <mat-form-field class="mat input">
+                                <input matInput [formControlName]="i">
+                            </mat-form-field>
+                            <!-- <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
+                                style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
+                                (click)="removeIngredient(i)">
+                                -
+                            </button> -->
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" (click)="addIngredient()">
-                        <i class="pi pi-plus"></i> הוסף רכיב
-                    </button>
                 </div>
-
                 <div>
                     <div formArrayName="preparation">
                         <div *ngFor="let preControl of getPreparation.controls; let i = index">
-                            <div class="mb-3 input">
-                                <input type="text" class="form-control" [formControlName]="i">
-                                <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
-                                    style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
-                                    (click)="removePreparation(i)">
-                                    -
-                                </button>
-                            </div>
+                            <h3 *ngIf="i===0" class="secondtytle">הוראות הכנה</h3>
+                            <p class="label-txt">הוראה {{ i + 1 }}</p>
+                            <mat-form-field class="mat input">
+                                <input matInput [formControlName]="i">
+                            </mat-form-field>
+                            <!-- <button type="button" class="btn btn-danger btn-sm btn-remove ingredient-remove"
+                                style="color: black; background-color: #FFC312; border: none; height: 38px; line-height: 1;"
+                                (click)="removePreparation(i)">
+                                -
+                            </button> -->
+
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" (click)="addPreparation()">
-                        <i class="pi pi-plus"></i> הוסף הוראות
-                    </button>
                 </div>
-
-
-                <p-button (click)="update()" label="Submit" icon="pi pi-check" iconPos="right"></p-button>
+                <div class="example-button-row ">
+                    <button color="accent" mat-raised-button (click)="addIngredient()">
+                        <i class="pi pi-plus"></i> הוסף רכיב
+                    </button>
+                    <button color="accent" mat-raised-button (click)="addPreparation()">
+                        <i class="pi pi-plus"></i>
+                        הוסף הוראות
+                    </button>
+                    <button color="accent" mat-raised-button (click)="update()">
+                        <i class="pi pi-check"></i>עדכון</button>
+                </div>
             </div>
         </div>
     </div>

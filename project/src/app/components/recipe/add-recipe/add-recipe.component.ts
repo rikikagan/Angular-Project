@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DatePipe } from '@angular/common';
 import { Category } from '../../category/categoryModel';
 import { CategoryService } from '../../category/category.service';
 import { User } from '../../user/userModel';
 import { Recipe } from '../recipeModel';
 import { RecipeServiceService } from '../recipe-service.service';
+import { urlValidator } from './urlValidator';
+import { MessageService } from 'primeng/api';
+import { arrayMinLengthValidator } from './arrayValidator';
 
 
 @Component({
@@ -19,17 +21,17 @@ export class AddRecipeComponent implements OnInit {
   public categories: Category[] = [];
   
   constructor(private _categoryService: CategoryService,private _recipeService:RecipeServiceService, 
-    private fb: FormBuilder,private router: Router) { }
+    private fb: FormBuilder,private router: Router,private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.addForm = this.fb.group({
-      recipeName: ['', Validators.required],
+      recipeName: ['', [Validators.required,Validators.minLength(5)]],
       recipeCategory: ['', Validators.required],
       recipeDifficulty: [0, Validators.required],
-      recipeTime: [0, Validators.required],
-      recipeImageUrl: ['', Validators.required],
-      ingredients: this.fb.array([]),
-      preparation: this.fb.array([])
+      recipeTime: [0, [Validators.required,Validators.pattern(/^(1?[1-9]|[1-9][0-9]|1[0-7][0-9]|180)$/)]],
+      recipeImageUrl: ['', [Validators.required,urlValidator]],
+      ingredients: this.fb.array([],arrayMinLengthValidator(2)),
+      preparation: this.fb.array([],arrayMinLengthValidator(2))
     });
 
     this._categoryService.getCategoryList().subscribe({
@@ -65,16 +67,25 @@ export class AddRecipeComponent implements OnInit {
   get getPreparation(): FormArray {
     return this.addForm.get('preparation') as FormArray;
   }
-
+  checkValidation()
+  {
+    if(this.addForm.invalid)
+      this.showTopCenter()
+    else
+      this.submit()
+  }
+  showTopCenter() {
+    this.messageService.add({ key: 'tc', severity: 'error', summary: 'שגיאה', detail: 'הטופס לא תקין' });
+  }
+  showSuccess() {
+    this.messageService.add({ key: 'tc', severity: 'success', summary: 'תקין', detail: 'המתכון נוסף בהצלחה' });
+}
   submit(){
-    let name=this.addForm.value.recipeName
     let category:Category={
       id: 0,
       name: this.addForm.value.recipeCategory,
       iconUrl: ''
     }
-    let preparationTime=this.addForm.value.recipeTime
-    let difficulty=parseInt(this.addForm.value.recipeDifficulty)
     let user: User = {
       userName: sessionStorage.getItem('username')!,
       id: 0,
@@ -82,25 +93,21 @@ export class AddRecipeComponent implements OnInit {
       email: '',
       password: sessionStorage.getItem('password')!
     };
-    let imgUrl=this.addForm.value.recipeImageUrl
-    let ingredients=this.addForm.value.ingredients
-    let preparation=this.addForm.value.preparation
-    let date=new Date();
     let newRecipe:Recipe={
       id: 0,
-      name: name,
+      name: this.addForm.value.recipeName,
       category: category,
-      preparationTime:preparationTime ,
-      difficulty: difficulty,
-      dateAdded:new Date(2024, 0, 12, 0, 0, 0),
-      ingredients: ingredients,
-      preparation: preparation,
+      preparationTime:this.addForm.value.recipeTime ,
+      difficulty: parseInt(this.addForm.value.recipeDifficulty),
+      dateAdded:new Date(),
+      ingredients: this.addForm.value.ingredients.filter((i: string) => i !== ''),
+      preparation: this.addForm.value.preparation.filter((p: string) => p !== ''),
       user: user,
-      imgUrl: imgUrl
+      imgUrl: this.addForm.value.recipeImageUrl
     }
     this._recipeService.addRecipe(newRecipe).subscribe({
       next: (res) => {
-        alert("תודה שהוספת לאתר שלנו מתכון!")
+        this.showSuccess()
         this.router.navigate(['/recipes/all-recipes'])
       },
       error: (err) => {
@@ -110,7 +117,3 @@ export class AddRecipeComponent implements OnInit {
 
   }
 }
-
-
-
-

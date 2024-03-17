@@ -1,48 +1,69 @@
 .addRecipe {
-    position: fixed;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
-
+form{
+  margin-top: 7%;
+}
 .input {
-    margin-left: 60%;
-    direction: rtl;
-    width: 50%;
+  margin-left: 60%;
+  direction: rtl;
+  width: 50%;
 }
 
 .newRecipe {
-    color: #FFC312;
-    direction: rtl;
-
+  color: #FFC312;
+  direction: rtl;
+  font-size: xx-large;
 }
 
 .input {
-    display: flex;
-    flex-direction:
-        row;
-    align-items: center;
+  display: flex;
+  flex-direction:
+    row;
+  align-items: center;
 }
 
 .input label {
-    margin-right: 1rem;
-    white-space: nowrap;
-    padding: 8px;
+  margin-right: 1rem;
+  white-space: nowrap;
+  padding: 8px;
 }
 .custom-textarea {
-    width: 700px;
-    height: 100px;
-  }
-  .custom-select {
-    max-width: 400px;
-  }
-  .formRecipe{
-    margin-right: 7%;
-    margin-top: 2%;
-  }
-  .col{
-    margin-right: 2%;
-  }
-  
+  width: 700px;
+  height: 100px;
+}
+.custom-select {
+  max-width: 400px;
+}
+.formRecipe {
+  margin-right: 7%;
+  margin-top: 2%;
+}
+.col {
+  margin-right: 2%;
+}
+.mat{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+button:hover {
+  background-color: #ffffff;
+}
+.secondtytle {
+  color: #FFC312;
+  font-size: x-large;
+}
+.label-txt{
+  color: #060502;
+  margin-right: 10%;
+  font-size: larger;
+}
 
-  
+
+
+
+

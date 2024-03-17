@@ -1,15 +1,24 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 19rem;">
   <img src={{recipeToShow.imgUrl}} class="card-img-top" alt="recipeImg">
 
   <div class="card-body">
-    <h5>{{recipeToShow.name}}</h5>
-    <span class="card-text">רמת קושי:</span>
-    <div>
 
-      <ng-container *ngFor="let index of [1, 2, 3, 4, 5]; let i = index">
-        <img  *ngIf="i < recipeToShow.difficulty" src="assets/star-fill.png" alt="Star icon" style="width: 16px; height: 16px;"/>
-        <img  *ngIf="i >= recipeToShow.difficulty" src="assets/star-outline.png" alt="Star icon" style="width: 16px; height: 16px;"/>
-      </ng-container>
+    <div class="widthContainer">
+      <div class="stars">
+        <ng-container *ngFor="let index of [1, 2, 3, 4, 5]; let i = index">
+          <i *ngIf="i < recipeToShow.difficulty" class="pi pi-star-fill" style="color: #FFC312;"></i>
+          <i *ngIf="i >= recipeToShow.difficulty" class="pi pi-star-fill" style="color: grey;"></i>
+        </ng-container>
+      </div>
+
+      <div class="timeContain">
+        <div class="time">{{recipeToShow.preparationTime}}</div>
+        <p class="lable">:זמן הכנה</p>
+      </div>
     </div>
+
+    <hr>
+    <h5 class="name">{{recipeToShow.name}}</h5>
+
   </div>
 </div>

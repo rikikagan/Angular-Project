@@ -66,13 +66,13 @@ export class AllRecipesComponent implements OnInit {
 
   filter() {
     this.filteredRecipes = this.recipesList.filter(recipe =>
-   ( this.filterForm.value.difficulty===undefined|| recipe.difficulty === this.filterForm.value.difficulty) && 
-   (this.filterForm.value.selectedCategory.length==0 || this.filterForm.value.selectedCategory.includes(recipe.category.name)) &&
-   (this.filterForm.value.time===0 || recipe.preparationTime <= parseInt(this.filterForm.value.time))
- );
- this.displayFilteredRecipes = true;
- this.recipesList=this.filteredRecipes;
- }
+      (this.filterForm.value.difficulty === undefined || recipe.difficulty === this.filterForm.value.difficulty) &&
+      (this.filterForm.value.selectedCategory.length == 0 || this.filterForm.value.selectedCategory.includes(recipe.category.name)) &&
+      (this.filterForm.value.time === 0 || recipe.preparationTime <= parseInt(this.filterForm.value.time))
+    );
+    this.displayFilteredRecipes = true;
+    this.recipesList = this.filteredRecipes;
+  }
 
   updateSelectedCategories(event: Event, category: string) {
     const formArray = this.filterForm.get('selectedCategory') as FormArray;
